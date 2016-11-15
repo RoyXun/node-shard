@@ -1,6 +1,6 @@
 {
   "name": "node-shard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "node implementation of redis sharding algothism based on murmurhash",
   "main": "lib/index.js",
   "scripts": {
