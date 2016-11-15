@@ -1,5 +1,5 @@
 var fs = require('fs');
-var nodeShard = require('../lib/index');
+var nodeShard = require('../lib/index').default;
 
 var inputFile = 'test/input.txt';
 var outputFile = 'test/output.txt';

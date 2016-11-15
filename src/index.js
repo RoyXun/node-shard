@@ -190,4 +190,4 @@ function getShard(sessionIdentifier) {
 }
 
 
-export {init, getShard};
+export default {init, getShard};
