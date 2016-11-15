@@ -7,7 +7,7 @@
 
 ###使用
 ```javascript
-var nodeShard = require('node-shard);
+var nodeShard = require('node-shard');
 //your custom config
 var shardConfig = [
     {name: 'shard1', weight: 1, server: [{port: 6379, host: '127.0.0.1'}]},
