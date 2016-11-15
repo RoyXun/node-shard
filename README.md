@@ -3,7 +3,9 @@
 不通用。
 
 ###安装
-`npm install node-shard --save`
+```
+npm install node-shard --save
+```
 
 ###使用
 ```javascript
@@ -23,5 +25,7 @@ var shard = nodeShard.getShard(sessionID);
 
 ###测试
 
-`npm run test`
+```
+npm run test
+```
 得到test/output.txt，可以与output_java.txt对比，查看两者映射的shard是否一致 

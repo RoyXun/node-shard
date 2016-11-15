@@ -3,6 +3,10 @@
   "version": "1.0.1",
   "description": "node implementation of redis sharding algothism based on murmurhash",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RoyXun/node-shard.git"
+  },
   "scripts": {
     "compile": "babel --presets es2015,stage-1 --plugins transform-runtime src/ --out-dir lib/ --source-maps",
     "test": "node test/test.js"
