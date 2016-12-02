@@ -9,7 +9,7 @@
   },
   "scripts": {
     "compile": "babel --presets es2015,stage-1 --plugins transform-runtime src/ --out-dir lib/ --source-maps",
-    "test": "npm run compile && node test/test.js"
+    "test": "node test/test.js"
   },
   "keywords": [
     "passport",
