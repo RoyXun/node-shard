@@ -9,7 +9,7 @@
   },
   "scripts": {
     "compile": "babel --presets es2015,stage-1 --plugins transform-runtime src/ --out-dir lib/ --source-maps",
-    "test": "node test/test.js"
+    "test": "npm run compile && node test/test.js"
   },
   "keywords": [
     "passport",
@@ -31,6 +31,7 @@
     "babel-core": "^6.18.2",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-1": "^6.16.0"
+    "babel-preset-stage-1": "^6.16.0",
+    "babel-runtime": "^6.18.0"
   }
 }
