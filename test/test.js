@@ -5,6 +5,8 @@ var inputFile = 'test/input.txt';
 var outputFile = 'test/output.txt';
 var shardConfig = []; 
 
+fs.writeFileSync(outputFile, '');
+
 for (var i = 1; i < 33; i++) {
     shardConfig.push({
         name: 'shard' + i,

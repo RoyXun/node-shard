@@ -1,13 +1,15 @@
-###简介
+### 简介
+*Deprecated*  现已改成 `sn-shard`
+
 为passport实现的node版的redis分片算法，目的是为了和java端分片算法根据sessionID映射相同的shard，底层基于murmurhash算法。
 不通用。
 
-###安装
+### 安装
 ```
 npm install node-shard --save
 ```
 
-###使用
+### 使用
 ```javascript
 var nodeShard = require('node-shard').default;
 //your custom config
@@ -23,7 +25,7 @@ var shard = nodeShard.getShard(sessionID);
 
 ```
 
-###测试
+### 测试
 
 ```
 npm run test
