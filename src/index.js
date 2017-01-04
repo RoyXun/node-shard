@@ -152,13 +152,15 @@ function compare(node1, node2) {
 /**
  * 二分查找
  */
-function findRecentKey(node, hashKeyArr, start, end) {
+function findClosestNode(node, hashKeyArr, start, end) {
     if (start == end) {
         return;
     }
 
     if (end - start === 1) {
-        if (compare(hashKeyArr[end], node) > 0) {
+        if (compare(hashKeyArr[start], node) >= 0) {
+            return hashKeyArr[start];
+        } else if (compare(hashKeyArr[end], node) >= 0) {
             return hashKeyArr[end];
         } else {
             return;
@@ -173,9 +175,9 @@ function findRecentKey(node, hashKeyArr, start, end) {
     }
 
     if (compare(node, midNode) > 0) {
-        return findRecentKey(node, hashKeyArr, mid, end);
+        return findClosestNode(node, hashKeyArr, mid, end);
     } else {
-        return findRecentKey(node, hashKeyArr, start, mid);
+        return findClosestNode(node, hashKeyArr, start, mid);
     }
 }
 
@@ -184,7 +186,7 @@ function findRecentKey(node, hashKeyArr, start, end) {
  */
 function getShard(sessionIdentifier) {
     let hashKey = hash(sessionIdentifier);
-    let node = findRecentKey(generateNode(hashKey), hashKeyArr, 0, hashKeyArr.length);
+    let node = findClosestNode(generateNode(hashKey), hashKeyArr, 0, hashKeyArr.length - 1);
 
     return node ? shards[node.shardIndex] : shards[hashKeyArr[0].shardIndex];
 }
